@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:background="#fff"
+    tools:context=".OrderActivity">
+
+    <ImageView
+        android:id="@+id/img_order_type"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/menu_gomart"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <TextView
+        android:id="@+id/order_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/img_order_type"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Mart Order"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-light"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <GridLayout
+        android:id="@+id/grid_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toBottomOf="@id/order_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:columnCount="2"
+        android:rowCount="3"
+
+        >
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama     : "
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="6dp"
+            />
+
+        <EditText
+            android:id="@+id/user_name"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Masukan Nama"
+            android:textSize="17sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alamat   : "
+            android:layout_marginBottom="6dp"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="18sp"
+            />
+
+        <EditText
+            android:id="@+id/user_addres"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Masukan Alamat"
+            android:textSize="17sp"
+            />
+        <TextView
+            android:id="@+id/tv_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pesanan : "
+            android:layout_marginBottom="6dp"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium"
+            />
+
+        <EditText
+            android:id="@+id/user_action"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Masukan Pesanan"
+            android:textSize="17sp"
+            />
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btn_order"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/buttonbiru"
+        android:text="Order"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/grid_layout"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
